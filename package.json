@@ -11,7 +11,7 @@
     "typescript"
   ],
   "scripts": {
-    "start": "gatsby develop",
+    "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
