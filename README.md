@@ -17,7 +17,7 @@
 - 👷 **PR Workflow** - Run Type Check & Linters on pull requests
 - 🗂 **Root import** - Import folders and files using the `@` prefix.
 
-## Script
+## Start Project
 
 ```
 $ yarn dev
