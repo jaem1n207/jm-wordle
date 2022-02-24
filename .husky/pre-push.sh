@@ -1,6 +1,4 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-. "$(dirname "$0")/common.sh"
 
 FORBIDDEN_HTTPS_URL="https://github.com/jaem1n207/jm-wordle.git" # insert your remote url (https)
 FORBIDDEN_SSH_URL="git@github.com:jaem1n207/jm-wordle.git" # insert your remote url (ssh)
@@ -29,5 +27,3 @@ then
 fi
 ​
 exit 0
-
-yarn test-coverage
