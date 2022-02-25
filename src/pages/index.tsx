@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <Title>Hello TypeScript!</Title>
-      pre-push test
+      pre-push test2
     </main>
   );
 }
