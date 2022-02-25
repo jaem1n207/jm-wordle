@@ -1,12 +1,11 @@
 import React from 'react';
 
-import Title from '@/components/Title';
+import Layout from '@/components/layout';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
-      <Title>Hello TypeScript!</Title>
-      pre-push test3
-    </main>
+    <Layout title="Home" description="Let's play wordle now!" article={false}>
+      wordle 보여줌
+    </Layout>
   );
 }
