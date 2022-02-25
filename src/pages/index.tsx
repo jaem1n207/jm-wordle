@@ -2,11 +2,11 @@ import React from 'react';
 
 import Title from '@/components/Title';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main>
       <Title>Hello TypeScript!</Title>
-      pre-push test3
+      wordle 보여줌
     </main>
   );
 }
