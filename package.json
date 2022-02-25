@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-ts",
-  "description": "A TypeScript starter for Gatsby that includes all you need to build amazing projects",
+  "name": "jm-wordle",
+  "description": "jm wordle",
   "version": "1.0.0",
   "private": true,
-  "author": "João Pedro Schmitz <hey@joaopedro.dev> (https://joaopedro.dev)",
+  "author": "jaem1n207 <roy.jm.lee@gmail.com>",
   "license": "MIT",
   "keywords": [
     "gatsby",

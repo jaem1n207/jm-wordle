@@ -1,29 +1,15 @@
-#!/bin/sh
-
-FORBIDDEN_HTTPS_URL="https://github.com/jaem1n207/jm-wordle.git" # insert your remote url (https)
-FORBIDDEN_SSH_URL="git@github.com:jaem1n207/jm-wordle.git" # insert your remote url (ssh)
-FORBIDDEN_REF="refs/heads/master" # insert branch ref
-​
-ARR_GIT_PARAMS=($(echo $HUSKY_GIT_PARAMS))
-ARR_GIT_STDIN=($(echo $HUSKY_GIT_STDIN))
-​
-remote=${ARR_GIT_PARAMS[0]}
-url=${ARR_GIT_PARAMS[1]}
-​
-local_ref=${ARR_GIT_STDIN[0]}
-local_sha=${ARR_GIT_STDIN[1]}
-remote_ref=${ARR_GIT_STDIN[2]}
-remote_sha=${ARR_GIT_STDIN[3]}
-​
-if [ "$url" != "$FORBIDDEN_HTTPS_URL" -a "$url" != "$FORBIDDEN_SSH_URL" ]
+#!/bin/bash
+protected_branch='master'
+current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+if [ $protected_branch = $current_branch ]
 then
-    exit 0 # Forked Project 에서는 제한하지 않음
+ read -p "You're about to push master, is that what you intended? [y|n] " -n 1 -r < /dev/tty
+ echo
+ if echo $REPLY | grep -E '^[Yy]$' > /dev/null
+ then
+ exit 0 # push will execute
+ fi
+ exit 1 # push will not execute
+else
+ exit 0 # push will execute
 fi
-​
-if [ "$remote_ref" == "$FORBIDDEN_REF" ]
-then
-    echo "DO NOT PUSH it master"
-    exit 1 # 금지된 ref 로 push 를 실행하면 에러
-fi
-​
-exit 0
