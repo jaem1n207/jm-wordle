@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `jm.wordle`,
+    title: `Jm Wordle Clone`,
+    titleTemplate: '%s · Jm Wordle Clone',
     author: 'Jaemin Lee',
-    description: 'This site is a brain stretching site',
+    description: 'English Wordle clone.',
     siteUrl: `https://jmwordlemain.gatsbyjs.io/`,
   },
   // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
