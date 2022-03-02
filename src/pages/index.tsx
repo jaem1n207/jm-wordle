@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from '@/components/layout';
+import { Board, Layout } from '@/components';
 
 export default function HomePage() {
   return (
@@ -9,7 +9,7 @@ export default function HomePage() {
       description="Let's play wordle now!"
       article={false}
     >
-      wordle 보여줌
+      <Board />
     </Layout>
   );
 }
