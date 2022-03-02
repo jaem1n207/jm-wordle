@@ -1,9 +1,12 @@
+import { BaseComponentProps } from '@/types';
 import { ISEOProps } from '@/types/seo';
 import React from 'react';
 
 import SEO from './seo';
 
-function Layout({ children, ...rest }: React.PropsWithChildren<ISEOProps>) {
+interface IProps extends BaseComponentProps, ISEOProps {}
+
+function Layout({ children, ...rest }: IProps) {
   return (
     <main>
       <SEO {...rest} />
