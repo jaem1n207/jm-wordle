@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
 import { UnstyledLink, SEO } from '@/components';
+import { useDarkMode } from '@/hooks/use-dark-mode';
 
 interface IProps extends BaseComponentProps, ISEOProps {}
 
@@ -24,26 +25,28 @@ function Layout({ children, ...rest }: IProps) {
     }
   `);
 
-  const { title, description, githubUrl } = data.site.siteMetadata;
+  const { title, githubUrl } = data.site.siteMetadata;
+
+  const { toggle: themeToggle } = useDarkMode();
 
   return (
-    <main>
+    <main className="h-screen max-w-full prose-sm prose transition duration-200 dark:bg-stone-900 md:prose-xl dark:prose-invert">
       <SEO {...rest} />
 
-      <header className="flex flex-nowrap items-center justify-between px-4 font-bold h-header text-xs text-center">
-        <div>
-          <UnstyledLink
-            className="text-violet-300 lg:text-xl inset-x-0"
-            external
-            url={githubUrl}
-          >
-            Github
-          </UnstyledLink>
-        </div>
-        <div className="lg:text-3xl inset-x-0">{title}</div>
-        <div className="lg:text-xl inset-x-0">{description}</div>
+      <header className="flex items-center justify-between px-4 flex-nowrap h-header">
+        <UnstyledLink
+          className="inset-x-0 dark:text-light"
+          external
+          url={githubUrl}
+        >
+          Github
+        </UnstyledLink>
+        <strong className="inset-x-0 dark:text-light">{title}</strong>
+        <button type="button" onClick={themeToggle}>
+          Toggle
+        </button>
       </header>
-      <div className="mx-auto h-content">{children}</div>
+      <div className="mx-auto h-content dark:text-light">{children}</div>
     </main>
   );
 }
