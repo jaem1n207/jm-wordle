@@ -1,5 +1,6 @@
 import { DependencyList, EffectCallback, useEffect } from 'react';
-import { useIsFirstRender } from './use-is-first-render';
+
+import { useIsFirstRender } from '@/hooks';
 
 /**
  * @description deps가 업데이트되었을 때만 effect가 실행되도록 하는 hook (첫 마운트 때 실행 x)

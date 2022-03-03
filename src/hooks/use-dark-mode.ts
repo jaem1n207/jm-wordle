@@ -1,7 +1,9 @@
-import { useIsomorphicLayoutEffect } from './use-isomorphic-layout-effect';
-import { useLocalStorage } from './use-local-storage';
-import { useMediaQuery } from './use-media-query';
-import { useUpdateEffect } from './use-update-effect';
+import {
+  useIsomorphicLayoutEffect,
+  useLocalStorage,
+  useMediaQuery,
+  useUpdateEffect,
+} from '@/hooks';
 
 const COLOR_SCHEME_QUERY = `(prefers-color-scheme: dark)`;
 
@@ -10,7 +12,7 @@ interface UseDarkModeOutput {
 }
 
 /**
- * @description dark mode 훅
+ * @description dark mode hook
  */
 export function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
   const isDarkOS = useMediaQuery(COLOR_SCHEME_QUERY);

@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useRef } from 'react';
 
-import { useIsomorphicLayoutEffect } from './use-isomorphic-layout-effect';
+import { useIsomorphicLayoutEffect } from '@/hooks';
 
 /**
  * @description eventListener를 더 간단하게 사용할 수 있도록 해주는 hook
