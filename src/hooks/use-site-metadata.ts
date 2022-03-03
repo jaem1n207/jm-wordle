@@ -28,8 +28,11 @@ const query = graphql`
   }
 `;
 
-export const useSiteMetadata = () => {
+/**
+ * @description 정적 site metadata를 가져오는 hook
+ */
+export function useSiteMetadata() {
   const { site }: SiteProps = useStaticQuery(query);
 
   return site.siteMetadata;
-};
+}
