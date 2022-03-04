@@ -6,6 +6,7 @@ type SiteProps = {
     siteMetadata: {
       author?: string;
       defaultDescription: string;
+      githubUrl?: string;
       siteUrl?: string;
       defaultTitle: string;
       titleTemplate: string;
@@ -20,6 +21,7 @@ const query = graphql`
       siteMetadata {
         author
         defaultDescription: description
+        githubUrl
         siteUrl
         defaultTitle: title
         titleTemplate

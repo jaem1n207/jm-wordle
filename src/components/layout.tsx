@@ -1,31 +1,14 @@
 import { BaseComponentProps } from '@/types';
 import { ISEOProps } from '@/types/seo';
-import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
 import { UnstyledLink, SEO } from '@/components';
-import { useDarkMode } from '@/hooks/use-dark-mode';
+import { useSiteMetadata, useDarkMode } from '@/hooks';
 
 interface IProps extends BaseComponentProps, ISEOProps {}
 
 function Layout({ children, ...rest }: IProps) {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        id
-        siteMetadata {
-          title
-          titleTemplate
-          siteUrl
-          description
-          author
-          githubUrl
-        }
-      }
-    }
-  `);
-
-  const { title, githubUrl } = data.site.siteMetadata;
+  const { defaultTitle, githubUrl } = useSiteMetadata();
 
   const { toggle: themeToggle } = useDarkMode();
 
@@ -41,7 +24,7 @@ function Layout({ children, ...rest }: IProps) {
         >
           Github
         </UnstyledLink>
-        <strong className="inset-x-0 dark:text-light">{title}</strong>
+        <strong className="inset-x-0 dark:text-light">{defaultTitle}</strong>
         <button type="button" onClick={themeToggle}>
           Toggle
         </button>
