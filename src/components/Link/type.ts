@@ -1,4 +1,4 @@
-export interface LinkLikeComponentProps
+export interface ILinkLikeComponentProps
   extends React.HTMLProps<HTMLAnchorElement> {
   /** 연결할 URL */
   url?: string;
@@ -10,5 +10,3 @@ export interface LinkLikeComponentProps
   download?: string | boolean;
   [key: string]: any;
 }
-
-export type LinkLikeComponent = React.ComponentType<LinkLikeComponentProps>;

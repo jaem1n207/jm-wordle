@@ -1,11 +1,11 @@
-import { BaseComponentProps } from '@/types';
+import { IBaseComponentProps } from '@/types';
 import { ISEOProps } from '@/types/seo';
 import React from 'react';
 
 import { UnstyledLink, SEO } from '@/components';
 import { useSiteMetadata, useDarkMode } from '@/hooks';
 
-interface IProps extends BaseComponentProps, ISEOProps {}
+interface IProps extends IBaseComponentProps, ISEOProps {}
 
 function Layout({ children, ...rest }: IProps) {
   const { defaultTitle, githubUrl } = useSiteMetadata();

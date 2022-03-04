@@ -7,14 +7,14 @@ import {
 
 const COLOR_SCHEME_QUERY = `(prefers-color-scheme: dark)`;
 
-interface UseDarkModeOutput {
+interface IUseDarkModeOutput {
   toggle: () => void;
 }
 
 /**
  * @description dark mode hook
  */
-export function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
+export function useDarkMode(defaultValue?: boolean): IUseDarkModeOutput {
   const isDarkOS = useMediaQuery(COLOR_SCHEME_QUERY);
   const [isDarkMode, setDarkMode] = useLocalStorage<boolean>(
     `jm-wordle-dark-theme`,

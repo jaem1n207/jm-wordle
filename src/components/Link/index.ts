@@ -1,3 +1,3 @@
-import UnstyledLink from './unstyledLink';
+import UnstyledLink from './UnstyledLink';
 
 export default UnstyledLink;
