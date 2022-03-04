@@ -11,6 +11,7 @@ function SEO({ title, description, article, lang }: ISEOProps) {
     useSiteMetadata();
 
   if (siteUrl === ``) {
+    // eslint-disable-next-line no-console
     console.error(`사이트 메타데이터에 baseUrl을 설정하세요!`);
     return null;
   }
