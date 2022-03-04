@@ -34,7 +34,7 @@ export function useLocalStorage<T>(
       return item ? (parseJSON(item) as T) : initialValue;
     } catch (error) {
       console.warn(
-        `로컬스토리지에서 “${key}”를 읽어드리는 데 실패했어요:`,
+        `로컬스토리지에서 “${key}”를 읽어드리는 데 실패했어요: `,
         error,
       );
       return initialValue;
@@ -88,7 +88,7 @@ function parseJSON<T>(value: string | null): T | undefined {
   try {
     return value === `undefined` ? undefined : JSON.parse(value ?? ``);
   } catch {
-    console.log(`parsing error on`, { value });
+    console.log(`구문을 분석하는 데 실패했어요: `, { value });
     return undefined;
   }
 }

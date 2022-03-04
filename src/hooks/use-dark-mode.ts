@@ -17,7 +17,7 @@ interface UseDarkModeOutput {
 export function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
   const isDarkOS = useMediaQuery(COLOR_SCHEME_QUERY);
   const [isDarkMode, setDarkMode] = useLocalStorage<boolean>(
-    `jm-wordle-theme`,
+    `jm-wordle-dark-theme`,
     defaultValue ?? isDarkOS ?? false,
   );
 
