@@ -13,7 +13,7 @@ function Layout({ children, ...rest }: IProps) {
   const { toggle: themeToggle } = useDarkMode();
 
   return (
-    <main className="h-screen max-w-full prose-sm prose transition duration-200 dark:bg-stone-900 md:prose-xl dark:prose-invert">
+    <main className="h-screen max-w-full prose-sm prose transition bg-light duration-250 dark:bg-dark md:prose-xl dark:prose-invert">
       <SEO {...rest} />
 
       <header className="flex items-center justify-between px-4 flex-nowrap h-header">

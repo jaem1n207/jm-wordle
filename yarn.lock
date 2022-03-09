@@ -10880,6 +10880,11 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
+sowpods-five@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/sowpods-five/-/sowpods-five-1.0.1.tgz#fffefbe51a74504e20ca6dbe55cee6f229e5a01b"
+  integrity sha1-//775Rp0UE4gym2+Vc7m8inloBs=
+
 spdx-correct@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-3.1.1.tgz#dece81ac9c1e6713e5f7d1b6f17d468fa53d89a9"
