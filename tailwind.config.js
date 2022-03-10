@@ -245,7 +245,7 @@ module.exports = {
         px: '1px',
       },
       height: {
-        header: '2.5rem',
+        header: '3rem',
         content: 'calc(100vh - 2.5rem)',
       },
     },
