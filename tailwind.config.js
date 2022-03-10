@@ -2,13 +2,13 @@
 /* eslint-disable global-require */
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
-  screens: {
-    sm: '480px',
-    md: '768px',
-    lg: '1024px',
-    xl: '1280px',
-  },
   theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     colors: {
       transparent: 'transparent',
       black: '#000',
@@ -246,7 +246,6 @@ module.exports = {
       },
       height: {
         header: '3rem',
-        content: 'calc(100vh - 2.5rem)',
       },
     },
   },

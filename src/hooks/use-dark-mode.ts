@@ -8,6 +8,7 @@ import {
 const COLOR_SCHEME_QUERY = `(prefers-color-scheme: dark)`;
 
 interface IUseDarkModeOutput {
+  isDarkMode: boolean;
   toggle: () => void;
 }
 
@@ -35,6 +36,7 @@ export function useDarkMode(defaultValue?: boolean): IUseDarkModeOutput {
   }, [isDarkMode]);
 
   return {
+    isDarkMode,
     toggle: () => setDarkMode((prev) => !prev),
   };
 }
