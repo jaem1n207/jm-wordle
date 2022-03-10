@@ -1,5 +1,8 @@
 # jm wordle
 
+## Play
+- https://jmwordlemain.gatsbyjs.io/
+
 ## Contributor
 
 - @jaem1n207 (재민)
