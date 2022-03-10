@@ -11,6 +11,7 @@ function SEO({ title, description, article, lang }: ISEOProps) {
     useSiteMetadata();
 
   if (siteUrl === ``) {
+    // eslint-disable-next-line no-console
     console.error(`사이트 메타데이터에 baseUrl을 설정하세요!`);
     return null;
   }
@@ -28,6 +29,11 @@ function SEO({ title, description, article, lang }: ISEOProps) {
       title={seo.title}
       titleTemplate={titleTemplate}
     >
+      <meta charSet="utf-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1"
+      />
       <meta name="description" content={seo.description} />
       {seo.url && <meta property="og:url" content={seo.url} />}
       {(article ? true : null) && <meta property="og:type" content="article" />}
