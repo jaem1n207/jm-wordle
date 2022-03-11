@@ -49,8 +49,6 @@ const createColors = (wordArr, target) => {
     }
   });
 
-  console.log(colors);
-
   return colors;
 };
 
@@ -114,6 +112,7 @@ function Board() {
     }
   }, []);
 
+  // eslint-disable-next-line no-console
   console.log(target);
 
   const handleEnteredKey = useCallback(
@@ -278,8 +277,8 @@ function Board() {
   };
 
   const handleClose = () => {
-    // eslint-disable-next-line no-console
     handleResetGame();
+    // eslint-disable-next-line no-console
     console.log(`모달 닫힘`);
   };
 
