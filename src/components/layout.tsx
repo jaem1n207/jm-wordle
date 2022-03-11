@@ -20,7 +20,7 @@ function Layout({ children, ...rest }: IProps) {
 
   return (
     <main className="absolute inset-0 flex flex-col items-center min-w-full prose-sm prose transition bg-light duration-250 dark:bg-dark md:prose-xl dark:prose-invert">
-      <div className="flex flex-col items-center justify-between flex-1 w-full max-w-lg overflow-hidden">
+      <div className="flex flex-col items-center justify-between flex-1 w-full overflow-hidden">
         <SEO {...rest} />
 
         <header className="flex items-center justify-between w-full h-12 no-underline border-b border-solid border-secondary dark:text-light">

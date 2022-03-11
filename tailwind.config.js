@@ -131,7 +131,7 @@ module.exports = {
       primaryHover: '#2c5282',
       secondary: '#718096',
       muted: '#e2e8f0',
-      success: '#9ae6b4',
+      success: '#276749',
       info: '#63b3ed',
       warning: '#faf089',
       danger: '#feb2b2',
