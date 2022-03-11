@@ -33,6 +33,7 @@
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off",
     "no-plusplus": "off",
+    "consistent-return": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
