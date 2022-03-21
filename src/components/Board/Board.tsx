@@ -1,6 +1,7 @@
 /* eslint-disable no-bitwise */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import sowpodsFive from 'sowpods-five';
+import { josa } from 'josa';
 
 import { Key } from '@/types/key';
 import { GlobalKeypressListener } from '@/utils/GlobalKeyPressListener';
@@ -171,7 +172,9 @@ function Board() {
             if (halfLetters.length) {
               for (let i = 0, { length } = halfLetters; i < length; i++) {
                 if (!word.split(``).includes(halfLetters[i])) {
-                  setToastMessage(`${halfLetters[i]}가 포함되어야 합니다`);
+                  setToastMessage(
+                    josa(`${halfLetters[i]}#{가} 포함되어야 합니다`),
+                  );
                   setTimeout(() => setToastMessage(``), 1500);
                   return;
                 }
@@ -302,7 +305,7 @@ function Board() {
       </div>
 
       {/* 키보드 영역 */}
-      <div className="flex flex-col items-center justify-center w-full h-48 max-w-lg bg-textMuted mb-14">
+      <div className="flex flex-col items-center justify-center w-full h-48 max-w-lg bg-textMuted md:mb-14">
         키보드 자판 들어갈 곳
       </div>
 
