@@ -19,8 +19,8 @@ function Layout({ children, ...rest }: IProps) {
   console.log(`isDarkMode: `, isDarkMode);
 
   return (
-    <main className="absolute inset-0 flex flex-col items-center min-w-full prose-sm prose transition bg-light duration-250 dark:bg-dark md:prose-xl dark:prose-invert">
-      <div className="flex flex-col items-center justify-between flex-1 w-full overflow-hidden">
+    <main className="flex flex-col items-center min-w-full min-h-screen prose-sm prose transition bg-light duration-250 dark:bg-dark md:prose-xl dark:prose-invert">
+      <div className="flex flex-col items-center justify-between flex-1 w-full">
         <SEO {...rest} />
 
         <header className="flex items-center justify-between w-full h-12 no-underline border-b border-solid border-secondary dark:text-light">
@@ -31,7 +31,7 @@ function Layout({ children, ...rest }: IProps) {
           >
             GitHub ↗
           </UnstyledLink>
-          <strong className="text-xl text-center uppercase sm:text-2xl">
+          <strong className="text-lg text-center uppercase sm:text-2xl">
             {defaultTitle}
           </strong>
           <label className="flex items-end px-1">

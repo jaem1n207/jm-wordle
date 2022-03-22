@@ -1,5 +1,11 @@
 /* eslint-disable no-bitwise */
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import sowpodsFive from 'sowpods-five';
 import { josa } from 'josa';
 
@@ -7,6 +13,7 @@ import { Key } from '@/types/key';
 import { GlobalKeypressListener } from '@/utils/GlobalKeyPressListener';
 import { GRAY, GREEN, YELLOW } from './constants';
 import Row from './Row';
+import KeyBoard from './Keyboard';
 import { fiveLetterDictionary } from './utils/dictionary';
 
 const createColors = (wordArr, target) => {
@@ -60,6 +67,7 @@ let halfLetters = [];
 let failedLetters = [];
 
 // TODO 2차 업데이트: 사전 API 사용하여 정답 단어 뜻 파악 가능하도록 하기
+// keyboard
 function Board() {
   const [grid, setGrid] = useState([
     {
@@ -118,13 +126,14 @@ function Board() {
 
   const handleEnteredKey = useCallback(
     // eslint-disable-next-line consistent-return
-    (e) => {
-      const { key } = e;
+    (e, isKeyboard: boolean) => {
       if (gameIsFinished) {
-        if (key === `Enter`) {
+        if (e.key === `Enter`) {
           return handleResetGame();
         }
       }
+
+      const key = isKeyboard ? e.key : e.target.id;
 
       if (/^[a-z]{1}$/i.test(key) && squareRef.current <= 4) {
         const newGrid = [...grid];
@@ -193,22 +202,22 @@ function Board() {
               let message;
               switch (rowRef.current) {
                 case 1:
-                  message = `로또 사러 가세요`;
+                  message = `천재네요!`;
                   break;
                 case 2:
-                  message = `천재네요`;
+                  message = `영어에 도가 트셨군요!`;
                   break;
                 case 3:
-                  message = `최석준이랑 동급이네요`;
+                  message = `최고예요!`;
                   break;
                 case 4:
-                  message = `대단해요`;
+                  message = `훌륭해요!`;
                   break;
                 case 5:
-                  message = `훌륭해요`;
+                  message = `대단해요!`;
                   break;
                 default:
-                  message = `잘했어요`;
+                  message = `잘했어요!`;
                   break;
               }
               setGameIsFinished(true);
@@ -285,11 +294,21 @@ function Board() {
     console.log(`모달 닫힘`);
   };
 
+  const keyboardProps = useMemo(
+    () => ({
+      onCharClick: handleEnteredKey,
+      matchedLetters,
+      halfLetters,
+      failedLetters,
+    }),
+    [handleEnteredKey],
+  );
+
   return (
     <div
       ref={containerRef}
-      className="flex flex-col items-center justify-around w-full h-screen"
-      onKeyDown={handleEnteredKey}
+      className="flex flex-col items-center justify-around w-full min-h-[calc(100vh-3rem)]"
+      onKeyDown={(e) => handleEnteredKey(e, true)}
       role="button"
       tabIndex={0}
     >
@@ -305,8 +324,10 @@ function Board() {
       </div>
 
       {/* 키보드 영역 */}
-      <div className="flex flex-col items-center justify-center w-full h-48 max-w-lg bg-textMuted md:mb-14">
-        키보드 자판 들어갈 곳
+      <div className="flex flex-col items-center justify-center w-full mb-12 lg:max-w-lg md:mb-14">
+        <KeyBoard letters="QWERTYUIOP" {...keyboardProps} />
+        <KeyBoard letters="ASDFGHJKL" {...keyboardProps} />
+        <KeyBoard letters=">ZXCVBNM<" {...keyboardProps} />
       </div>
 
       {/* Toast */}
