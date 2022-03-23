@@ -1,9 +1,5 @@
-import {
-  useIsomorphicLayoutEffect,
-  useLocalStorage,
-  useMediaQuery,
-  useUpdateEffect,
-} from '@/hooks';
+import { useLocalStorage, useMediaQuery, useUpdateEffect } from '@/hooks';
+import { useEffect } from 'react';
 
 const COLOR_SCHEME_QUERY = `(prefers-color-scheme: dark)`;
 
@@ -27,7 +23,7 @@ export function useDarkMode(defaultValue?: boolean): IUseDarkModeOutput {
     setDarkMode(isDarkOS);
   }, [isDarkOS]);
 
-  useIsomorphicLayoutEffect(() => {
+  useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add(`dark`);
     } else {

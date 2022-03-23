@@ -31,17 +31,18 @@
     ]
   },
   "dependencies": {
+    "@headlessui/react": "1.5.0",
     "@react-icons/all-files": "4.1.0",
     "@types/react-helmet": "6.1.5",
     "gatsby": "4.7.2",
     "gatsby-plugin-react-helmet": "5.8.0",
     "gatsby-plugin-sitemap": "5.8.0",
+    "josa": "3.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-helmet": "6.1.0",
     "react-icons": "4.3.1",
     "react-switch": "6.0.0",
-    "sowpods-five": "1.0.1",
     "tsconfig-paths-webpack-plugin": "3.5.2"
   },
   "devDependencies": {

@@ -1444,6 +1444,11 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@headlessui/react@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.5.0.tgz#483b44ba2c8b8d4391e1d2c863898d7dd0cc0296"
+  integrity sha512-aaRnYxBb3MU2FNJf3Ut9RMTUqqU3as0aI1lQhgo2n9Fa67wRu14iOGqx93xB+uMNVfNwZ5B3y/Ndm7qZGuFeMQ==
+
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"
@@ -7862,6 +7867,18 @@ joi@^17.4.2:
     "@sideway/formula" "^3.0.0"
     "@sideway/pinpoint" "^2.0.0"
 
+jongseong@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/jongseong/-/jongseong-0.4.2.tgz#5008c13332829257304c54641f550087d2f4caa9"
+  integrity sha1-UAjBMzKCklcwTFRkH1UAh9L0yqk=
+
+josa@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/josa/-/josa-3.0.1.tgz#e1fa94fc7c78be1d81e965fec0ae43be0a1df352"
+  integrity sha1-4fqU/Hx4vh2B6WX+wK5Dvgod81I=
+  dependencies:
+    jongseong "^0.4.2"
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -10896,11 +10913,6 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
-
-sowpods-five@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/sowpods-five/-/sowpods-five-1.0.1.tgz#fffefbe51a74504e20ca6dbe55cee6f229e5a01b"
-  integrity sha1-//775Rp0UE4gym2+Vc7m8inloBs=
 
 spdx-correct@^3.0.0:
   version "3.1.1"
