@@ -45,7 +45,7 @@ function Modal({
               {children}
             </div>
             {footerChildren && (
-              <Dialog.Description className="px-5 py-2">
+              <Dialog.Description className="text-xl text-center bg-half hover:bg-warning">
                 {footerChildren}
               </Dialog.Description>
             )}

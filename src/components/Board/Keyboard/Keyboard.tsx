@@ -44,7 +44,8 @@ function KeyBoard({
         }
 
         return (
-          <div
+          <button
+            type="button"
             key={letter}
             id={id}
             className="flex items-center justify-center mr-1 h-14 max-h[calc(7vh)] rounded text-sm font-bold cursor-pointer select-none w-11 max-w-[calc(10%-4px)] max-h-[calc(7vh)]"
@@ -53,10 +54,9 @@ function KeyBoard({
               ...([`<`, `>`].includes(letter) && { padding: `0 10px` }),
             }}
             onClick={(e) => onCharClick(e, false)}
-            aria-hidden="true"
           >
             {char}
-          </div>
+          </button>
         );
       })}
     </div>
