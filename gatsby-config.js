@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Jm Wordle Clone`,
-    titleTemplate: '%s · Jm Wordle Clone',
+    title: `Jm Wordle`,
+    titleTemplate: '%s · Jm Wordle',
     author: 'Jaemin Lee',
-    description: 'English Wordle clone.',
+    description: 'English Wordle Clone',
     siteUrl: `https://jmwordlemain.gatsbyjs.io/`,
     githubUrl: `https://github.com/jaem1n207/jm-wordle`,
   },
