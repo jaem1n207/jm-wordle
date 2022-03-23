@@ -375,6 +375,7 @@ export const fiveLetterDictionary = [
   `guide`,
   `guilt`,
   `habit`,
+  `happy`,
   `haste`,
   `haunt`,
   `haven`,
