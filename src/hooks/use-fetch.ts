@@ -27,10 +27,7 @@ export function useFetch<T = unknown>(
         }
 
         const data = (await response.json()) as T;
-        setState((prev) => ({
-          error: prev.error,
-          data,
-        }));
+        setState({ error: undefined, data });
       } catch (error) {
         setState((prev) => ({
           error,
