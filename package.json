@@ -31,6 +31,7 @@
     ]
   },
   "dependencies": {
+    "@headlessui/react": "1.5.0",
     "@react-icons/all-files": "4.1.0",
     "@types/react-helmet": "6.1.5",
     "gatsby": "4.7.2",
@@ -42,7 +43,6 @@
     "react-helmet": "6.1.0",
     "react-icons": "4.3.1",
     "react-switch": "6.0.0",
-    "sowpods-five": "1.0.1",
     "tsconfig-paths-webpack-plugin": "3.5.2"
   },
   "devDependencies": {
