@@ -11,7 +11,7 @@
 
 - Wordle - English
 - Has strict mode
-- fetch dictionary api
+- Fetch dictionary api
 - Dark Mode
 
 ## Start Project
