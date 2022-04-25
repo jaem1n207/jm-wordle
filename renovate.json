@@ -1,7 +1,15 @@
 {
-  "extends": ["config:base"],
+  "extends": [":timezone(Asia/Seoul)", ":label(renovate)", "config:base"],
   "semanticCommits": true,
   "stabilityDays": 3,
   "prCreation": "not-pending",
-  "labels": ["type: dependencies"]
+  "labels": ["type: dependencies"],
+  "rangeStrategy": "pin",
+  "baseBranches": ["dependency-updates"],
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
 }
