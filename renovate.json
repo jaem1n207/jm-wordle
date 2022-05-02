@@ -1,7 +1,17 @@
 {
-  "extends": ["config:base"],
+  "schedule": ["after 7pm and before 10am every weekday", "every weekend"],
+  "extends": [":timezone(Asia/Seoul)", ":label(renovate)", "config:base"],
   "semanticCommits": true,
   "stabilityDays": 3,
   "prCreation": "not-pending",
-  "labels": ["type: dependencies"]
+  "labels": ["type: dependencies"],
+  "rangeStrategy": "pin",
+  "baseBranches": ["dependency-updates"],
+  "packageRules": [
+    {
+      "description": "Automatically merge minor and patch-level updates",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
 }
